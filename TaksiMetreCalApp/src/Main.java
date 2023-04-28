@@ -3,15 +3,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //Variables
-        double km , kmTl  , minVal , openVal ,result , total;
+        double km , kmTl  , minVal , openVal ,result , total, kmPer
+                ;
+        openVal = 10.0 ;
+        minVal = 20.0;
+        kmPer = 2.20;
 
         Scanner kmImp  =  new Scanner(System.in);
         System.out.println("Km girişi: ");
         km = kmImp.nextDouble();
 
-        kmTl = km* 2.20 ;
-        openVal = 10.0 ;
-        minVal = 20.0;
+        kmTl = km* kmPer ;
+
  result = kmTl + openVal;
 
         total =  result < minVal ? 20 : result ;
