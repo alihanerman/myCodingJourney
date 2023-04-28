@@ -17,7 +17,7 @@ public class Main {
 
  result = kmTl + openVal;
 
-        total =  result < minVal ? 20 : result ;
+        total = Math.max(result, minVal);
 
         System.out.println("Price: " + total);
 
