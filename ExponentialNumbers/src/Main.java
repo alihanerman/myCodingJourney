@@ -1,6 +1,15 @@
 import java.util.Scanner;
 
 public class Main {
+    public static int exponentiation(int base, int exponent) {
+        if (exponent == 0)
+            return 1;
+        else if (exponent == 1)
+            return base;
+        else
+            return base * exponentiation(base, exponent - 1);
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,12 +24,5 @@ public class Main {
     }
 
     // Recursive method to perform exponentiation
-    public static int exponentiation(int base, int exponent) {
-        if (exponent == 0)
-            return 1;
-        else if (exponent == 1)
-            return base;
-        else
-            return base * exponentiation(base, exponent - 1);
-    }
+
 }
