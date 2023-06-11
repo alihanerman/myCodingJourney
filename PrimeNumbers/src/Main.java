@@ -1,22 +1,20 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
-        // Loop through all numbers between 1 and 100
-        for (int i = 2; i <= 100; i++) {
-            boolean isPrime = true;
 
-            // Check if the number is prime
-            for (int j = 2; j < i; j++) {
-                if (i % j == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
+    public static int primeNumber(int number, int divisor) {
 
-            // Print the prime number
-            if (isPrime) {
-                System.out.print(i + " ");
-            }
-        }
+        if (number < 2) return  0;
+        else if (divisor == 1) return 1;
+        else if (number % divisor == 0) return 0;
+        return primeNumber(number,divisor-1);
+
+
     }
+    public static void main(String[] args) {
+        System.out.println( primeNumber(14,2));
+    }
+
 }
 
